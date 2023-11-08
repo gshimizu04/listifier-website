@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listifier</title>
+
+    <!--Font Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/icon.png">
+</head>
+<body>
+    <div class="menu_navigation">
+        <div class="logo">
+            <img src="assets/img/icon.png" alt="Ícone To-Do List" height="35px" width="55px">
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="new_task.html">Adicionar tarefa</a></li>
+                <li><a href="contact.html">Entre em contato</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content__logo">
+            <h1>LISTIFIER</h1>
+            <img src="assets/img/icon.png" alt="Ícone To-Do List">
+        </div>
+        <div class="content__addTask">
+            <div class="addTask_text">
+                <h2>Adicione aqui uma nova Tarefa!</h2>
+                <p class="instructions">Sua tarefa é composta por: NOME e NÍVEL DE URGÊNCIA. Após inserir os dados, clique no botão de "Adicionar Tarefa" para salvá-la.</p>
+                <div class="addTask_inputs">
+                    <p>Tarefa:</p>
+                    <input id="taskName" type="text" placeholder="Ex: Lavar a louça"><br>
+                    <p>Urgência da Tarefa:</p>
+                    <select id="taskUrgency">
+                        <option value=""></option>
+                        <option value="Baixa">Baixa</option>
+                        <option value="Média">Média</option>
+                        <option value="Urgente">Urgente</option>
+                    </select><br>
+                    <button onclick="addTask()">Adicionar Tarefa</button>
+                </div>  
+                <ul id="listContainer">
+                   <!-- <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

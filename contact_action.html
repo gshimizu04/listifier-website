@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listifier</title>
+
+    <!--Font Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/icon.png">
+</head>
+<body>
+    <div class="menu_navigation">
+        <div class="logo">
+            <img src="assets/img/icon.png" alt="Ícone To-Do List" height="35px" width="55px">
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="new_task.html">Adicionar tarefa</a></li>
+                <li><a class="active" href="contact.html">Entre em contato</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content__logo">
+            <h1>LISTIFIER</h1>
+            <img src="assets/img/icon.png" alt="Ícone To-Do List">
+        </div>
+        <div class="contact_data">
+            <h2>Dados de contato</h2>
+            <ul>
+                <li><strong>Nome:</strong> <span id="name"></span></li>
+                <li><strong>Email:</strong> <span id="email"></span></li>
+                <li><strong>Celular:</strong> <span id="phone"></span></li>
+                <li><strong>Data de Nascimento:</strong> <span id="date"></span></li>
+            </ul>
+            <div class="return_button">
+                <input type="button" class="return" 
+                   value="Retornar" onclick="history.back()">
+            </div>
+        </div>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+    
+            if (urlParams.has('name')) {
+                document.getElementById('name').textContent = urlParams.get('name');
+            }
+
+            if (urlParams.has('email')) {
+                document.getElementById('email').textContent = urlParams.get('email');
+            }
+
+            if (urlParams.has('phone')) {
+                document.getElementById('phone').textContent = urlParams.get('phone');
+            }
+
+            if (urlParams.has('date')) {
+                document.getElementById('date').textContent = urlParams.get('date');
+            }
+        </script>
+</body>
+</html>

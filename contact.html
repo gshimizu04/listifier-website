@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listifier</title>
+
+    <!--Font Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/img/icon.png">
+</head>
+<body>
+    <div class="menu_navigation">
+        <div class="logo">
+            <img src="assets/img/icon.png" alt="Ícone To-Do List" height="35px" width="55px">
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="new_task.html">Adicionar tarefa</a></li>
+                <li><a class="active" href="contact.html">Entre em contato</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content__logo">
+            <h1>LISTIFIER</h1>
+            <img src="assets/img/icon.png" alt="Ícone To-Do List">
+        </div>
+        <div class="content__text">
+            <h2>Entre em contato conosco!</h2>
+            <div class="contact_form">
+                <form method="GET" action="contact_action.html">
+                    <div class="form_group">
+                        <label for="name"><img src="assets/img/user.png" alt="" style="height: 36px;"></label>
+                        <input type="text" name="name" id="name" placeholder="Nome" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="email"><img src="assets/img/email.png" alt="" style="height: 36px;"></label>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="phone"><img src="assets/img/phone.png" alt="" style="height: 36px;"></label>
+                        <input type="phone" name="phone" id="phone" pattern="\(\d{2}\)\s\d{4,5}-\d{4}$"                    
+                        onkeydown="return mascaraTelefone(event)" placeholder="Celular" title="(xx) xxxxx-xxxx" required>
+                    </div>
+                    <div class="form_group">
+                        <label for="date"><img src="assets/img/date.png" alt="" style="height: 36px;"></label>
+                        <input type="date" name="date" id="date" placeholder="Data de Nascimento" required>
+                    </div>
+                    <div class="form_groupX">
+                        <label for="suggestions">Digite uma sugestão ou feedback para nós</label>
+                        <textarea name="suggestions" id="suggestions" cols="30" rows="10" placeholder="Digite algo..." required></textarea>
+                    </div>
+                    <div class="form_button">
+                        <input type="submit" class="form_submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
